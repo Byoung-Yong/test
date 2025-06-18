@@ -35,4 +35,10 @@ class CVHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    HTTPServer(('0.0.0.0', 8000), CVHandler).serve_forever()
+    httpd = HTTPServer(('0.0.0.0', 8000), CVHandler)
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        httpd.server_close()

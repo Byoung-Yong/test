@@ -7,6 +7,7 @@ This repository contains a minimal web service that simulates cyclic voltammetry
 ```bash
 python server.py
 ```
+Press `Ctrl-C` in the terminal to stop the server.
 
 The server listens on `http://localhost:8000`. Open this address in a web browser to load `index.html`. Fill out the form parameters and run the simulation. The resulting current vs. potential curve is displayed using Chart.js.
 
