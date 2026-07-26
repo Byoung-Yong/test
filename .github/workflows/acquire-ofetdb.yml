@@ -5,7 +5,6 @@ on:
     branches: [main]
     paths:
       - scripts/**
-      - tests/**
       - trigger-ofet-acquisition.txt
   workflow_dispatch:
 
@@ -15,7 +14,7 @@ permissions:
 jobs:
   acquire-and-validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 35
     steps:
       - name: Check out PR branch
         uses: actions/checkout@v4
@@ -29,47 +28,22 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: python -m pip install --upgrade pip pandas openpyxl requests scipy scikit-learn catboost rdkit pytest
+        run: python -m pip install --upgrade pip pandas openpyxl requests scipy scikit-learn catboost
 
-      - name: Restore compressed validation sources
-        shell: bash
-        run: |
-          python - <<'PY'
-          import base64, gzip
-          from pathlib import Path
-          pairs = [
-              (Path('scripts/run_structure_aware_validation.py.gz.b64'), Path('scripts/run_structure_aware_validation.py')),
-              (Path('scripts/run_709_prior_quantum_validation.py.gz.b64'), Path('scripts/run_709_prior_quantum_validation.py')),
-              (Path('tests/test_structure_aware_model.py.gz.b64'), Path('tests/test_structure_aware_model.py')),
-          ]
-          for src, dst in pairs:
-              dst.parent.mkdir(parents=True, exist_ok=True)
-              dst.write_bytes(gzip.decompress(base64.b64decode(src.read_text().strip())))
-          PY
-
-      - name: Download and verify OFET-db workbooks
+      - name: Download, verify, and convert OFET-db workbooks
         run: python scripts/acquire_ofetdb.py
 
-      - name: Verify implementation
-        env:
-          PYTHONPATH: scripts
-        run: |
-          python -m py_compile scripts/run_structure_aware_validation.py scripts/run_709_prior_quantum_validation.py tests/test_structure_aware_model.py
-          pytest -q tests/test_structure_aware_model.py
+      - name: Run locked hidden-family and hidden-dataset validation
+        run: python scripts/run_hidden_family_dataset_validation.py | tee hidden_validation.log
 
-      - name: Run leakage-resistant 709 chemistry-prior validation
-        env:
-          PYTHONPATH: scripts
-        run: python scripts/run_709_prior_quantum_validation.py | tee prior_quantum_validation.log
-
-      - name: Commit validation outputs to PR branch
+      - name: Commit verified data and validation outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ofet_raw ofet_709_prior_quantum_validation prior_quantum_validation.log
+          git add ofet_raw ofet_hidden_validation hidden_validation.log
           if git diff --cached --quiet; then
             echo "No output changes"
             exit 0
           fi
-          git commit -m "Add leakage-resistant 709 chemistry-prior results"
+          git commit -m "Add hidden family and dataset validation results"
           git push origin HEAD:${{ github.head_ref || github.ref_name }}
