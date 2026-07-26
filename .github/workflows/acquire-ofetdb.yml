@@ -46,13 +46,21 @@ jobs:
             audit_code=$?
             python scripts/run_709_external_dataset_test_fixed.py >> hidden_validation.log 2>&1
             external709_code=$?
+            if [ "$external709_code" -eq 0 ]; then
+              python scripts/dump_709_encoder_categories.py >> hidden_validation.log 2>&1
+              category_dump_code=$?
+            else
+              category_dump_code=99
+            fi
           else
             audit_code=99
             external709_code=99
+            category_dump_code=99
           fi
           echo "validation=$validation_code" > hidden_validation.exitcode
           echo "audit=$audit_code" >> hidden_validation.exitcode
           echo "external709=$external709_code" >> hidden_validation.exitcode
+          echo "category_dump=$category_dump_code" >> hidden_validation.exitcode
           cat hidden_validation.log
           exit 0
 
@@ -66,5 +74,5 @@ jobs:
             echo "No output changes"
             exit 0
           fi
-          git commit -m "Update hidden validation, independence audit, and 709 external test"
+          git commit -m "Update hidden validation and 709 vocabulary audit"
           git push origin HEAD:chatgpt/ofet-raw-acquisition-20260726
