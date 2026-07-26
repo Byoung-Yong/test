@@ -40,8 +40,15 @@ jobs:
         run: |
           set +e
           python scripts/run_hidden_validation_fixed.py > hidden_validation.log 2>&1
-          code=$?
-          echo "$code" > hidden_validation.exitcode
+          validation_code=$?
+          if [ "$validation_code" -eq 0 ]; then
+            python scripts/audit_dataset_independence.py >> hidden_validation.log 2>&1
+            audit_code=$?
+          else
+            audit_code=99
+          fi
+          echo "validation=$validation_code" > hidden_validation.exitcode
+          echo "audit=$audit_code" >> hidden_validation.exitcode
           cat hidden_validation.log
           exit 0
 
@@ -55,5 +62,5 @@ jobs:
             echo "No output changes"
             exit 0
           fi
-          git commit -m "Update hidden validation outputs"
+          git commit -m "Update hidden validation and independence audit"
           git push origin HEAD:chatgpt/ofet-raw-acquisition-20260726
