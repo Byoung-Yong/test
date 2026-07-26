@@ -16,7 +16,7 @@ jobs:
   acquire-and-validate:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 40
     steps:
       - name: Check out acquisition branch
         uses: actions/checkout@v4
@@ -44,11 +44,15 @@ jobs:
           if [ "$validation_code" -eq 0 ]; then
             python scripts/audit_dataset_independence.py >> hidden_validation.log 2>&1
             audit_code=$?
+            python scripts/run_709_external_dataset_test.py >> hidden_validation.log 2>&1
+            external709_code=$?
           else
             audit_code=99
+            external709_code=99
           fi
           echo "validation=$validation_code" > hidden_validation.exitcode
           echo "audit=$audit_code" >> hidden_validation.exitcode
+          echo "external709=$external709_code" >> hidden_validation.exitcode
           cat hidden_validation.log
           exit 0
 
@@ -62,5 +66,5 @@ jobs:
             echo "No output changes"
             exit 0
           fi
-          git commit -m "Update hidden validation and independence audit"
+          git commit -m "Update hidden validation, independence audit, and 709 external test"
           git push origin HEAD:chatgpt/ofet-raw-acquisition-20260726
