@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cyclic Voltammetry Simulation</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1>Cyclic Voltammetry Simulator</h1>
+<form id="sim-form">
+    <label>Start Potential (V): <input type="number" name="E_start" step="any" value="-0.5"></label><br>
+    <label>Reverse Potential (V): <input type="number" name="E_reverse" step="any" value="0.5"></label><br>
+    <label>Formal Potential (V): <input type="number" name="E0" step="any" value="0.0"></label><br>
+    <label>Scan Rate (V/s): <input type="number" name="scan_rate" step="any" value="0.1"></label><br>
+    <label>Steps: <input type="number" name="steps" value="200"></label><br>
+    <button type="submit">Run Simulation</button>
+</form>
+<canvas id="cvChart" width="600" height="400"></canvas>
+<script>
+const form = document.getElementById('sim-form');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    for (const k in data) { data[k] = parseFloat(data[k]); }
+    const res = await fetch('/simulate', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    const ctx = document.getElementById('cvChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: result.potential,
+            datasets: [{label: 'Current (A)', data: result.current, borderColor: 'blue', fill: false}]
+        },
+        options: {
+            responsive: false,
+            scales: {
+                x: { type: 'linear', title: { display: true, text: 'Potential (V)' } },
+                y: { title: { display: true, text: 'Current (A)' } }
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>
