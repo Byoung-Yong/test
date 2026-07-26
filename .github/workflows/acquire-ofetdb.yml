@@ -1,11 +1,6 @@
 name: Acquire and validate OFET external data
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - scripts/**
-      - trigger-ofet-acquisition.txt
   workflow_dispatch:
 
 permissions:
@@ -16,10 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 35
     steps:
-      - name: Check out PR branch
+      - name: Check out selected branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -46,4 +40,4 @@ jobs:
             exit 0
           fi
           git commit -m "Add hidden family and dataset validation results"
-          git push origin HEAD:${{ github.head_ref || github.ref_name }}
+          git push
