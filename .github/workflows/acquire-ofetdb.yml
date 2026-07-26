@@ -1,0 +1,46 @@
+name: Acquire verified OFET-db data
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - scripts/acquire_ofetdb.py
+      - trigger-ofet-acquisition.txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pandas openpyxl requests
+
+      - name: Download, verify, and convert OFET-db workbooks
+        run: python scripts/acquire_ofetdb.py
+
+      - name: Commit verified outputs to acquisition branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ofet_raw
+          if git diff --cached --quiet; then
+            echo "No output changes"
+            exit 0
+          fi
+          git commit -m "Add verified OFET-db raw data"
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
