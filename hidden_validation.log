@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/runner/work/test/test/scripts/run_hidden_family_dataset_validation.py", line 420, in <module>
+    main()
+  File "/home/runner/work/test/test/scripts/run_hidden_family_dataset_validation.py", line 353, in main
+    p3ht, p3ht_manifest = download_and_parse_p3ht()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test/test/scripts/run_hidden_family_dataset_validation.py", line 140, in download_and_parse_p3ht
+    raise RuntimeError(f"P3HT MAT blob mismatch: {actual_blob}")
+RuntimeError: P3HT MAT blob mismatch: 5ce52b1fb505f3bb2c5341a57349381713195b60
