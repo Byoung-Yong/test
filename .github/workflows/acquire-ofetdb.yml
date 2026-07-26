@@ -35,17 +35,25 @@ jobs:
       - name: Download, verify, and convert OFET-db workbooks
         run: python scripts/acquire_ofetdb.py
 
-      - name: Run locked hidden-family and hidden-dataset validation
-        run: python scripts/run_hidden_family_dataset_validation.py | tee hidden_validation.log
+      - name: Run validation and preserve diagnostic output
+        shell: bash
+        run: |
+          set +e
+          python scripts/run_hidden_family_dataset_validation.py > hidden_validation.log 2>&1
+          code=$?
+          echo "$code" > hidden_validation.exitcode
+          cat hidden_validation.log
+          exit 0
 
-      - name: Commit verified data and validation outputs
+      - name: Commit data, results, and diagnostics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ofet_raw ofet_hidden_validation hidden_validation.log
+          git add ofet_raw hidden_validation.log hidden_validation.exitcode
+          if [ -d ofet_hidden_validation ]; then git add ofet_hidden_validation; fi
           if git diff --cached --quiet; then
             echo "No output changes"
             exit 0
           fi
-          git commit -m "Add hidden family and dataset validation results"
+          git commit -m "Update hidden validation outputs"
           git push origin HEAD:chatgpt/ofet-raw-acquisition-20260726
