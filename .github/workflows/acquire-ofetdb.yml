@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          python scripts/run_hidden_family_dataset_validation.py > hidden_validation.log 2>&1
+          python scripts/run_hidden_validation_fixed.py > hidden_validation.log 2>&1
           code=$?
           echo "$code" > hidden_validation.exitcode
           cat hidden_validation.log
