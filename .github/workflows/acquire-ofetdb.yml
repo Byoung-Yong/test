@@ -1,11 +1,11 @@
-name: Acquire verified OFET-db data
+name: Acquire and validate OFET external data
 
 on:
   push:
     branches:
       - chatgpt/ofet-raw-acquisition-20260726
     paths:
-      - scripts/acquire_ofetdb.py
+      - scripts/**
       - .github/workflows/acquire-ofetdb.yml
       - trigger-ofet-acquisition.txt
 
@@ -13,10 +13,10 @@ permissions:
   contents: write
 
 jobs:
-  acquire:
+  acquire-and-validate:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - name: Check out acquisition branch
         uses: actions/checkout@v4
@@ -30,19 +30,22 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: python -m pip install --upgrade pip pandas openpyxl requests
+        run: python -m pip install --upgrade pip pandas openpyxl requests scipy scikit-learn catboost
 
       - name: Download, verify, and convert OFET-db workbooks
         run: python scripts/acquire_ofetdb.py
 
-      - name: Commit verified outputs
+      - name: Run locked hidden-family and hidden-dataset validation
+        run: python scripts/run_hidden_family_dataset_validation.py | tee hidden_validation.log
+
+      - name: Commit verified data and validation outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ofet_raw
+          git add ofet_raw ofet_hidden_validation hidden_validation.log
           if git diff --cached --quiet; then
             echo "No output changes"
             exit 0
           fi
-          git commit -m "Add verified OFET-db raw data"
+          git commit -m "Add hidden family and dataset validation results"
           git push origin HEAD:chatgpt/ofet-raw-acquisition-20260726
