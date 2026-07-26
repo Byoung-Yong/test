@@ -1,0 +1,149 @@
+{
+  "ofetdb_p3ht_rows": 218,
+  "external_p3ht_rows": 218,
+  "ofetdb_p3ht_sources": 19,
+  "external_p3ht_sources": 24,
+  "source_overlap_count": 19,
+  "source_overlap": [
+    "10.1002/adfm.200400017",
+    "10.1002/adfm.201002729",
+    "10.1002/adfm.201301007",
+    "10.1002/adfm.201403708",
+    "10.1002/adma.200305275",
+    "10.1002/polb.23022",
+    "10.1007/s11801-011-0122-z",
+    "10.1016/j.orgel.2011.06.027",
+    "10.1016/j.synthmet.2006.04.013",
+    "10.1021/am3027822",
+    "10.1021/cm049617w",
+    "10.1021/jp4116047",
+    "10.1021/ma047415f",
+    "10.1021/ma2000515",
+    "10.1021/nn401323f",
+    "10.1063/1.2222065",
+    "10.1063/1.2400796",
+    "10.1103/physrevb.74.115318",
+    "10.5012/bkcs.2014.35.88.22770"
+  ],
+  "log10_mobility_multiset_identical": false,
+  "mobility_multiset_identical": false,
+  "same_underlying_cohort": false,
+  "independent_dataset_test_valid": true,
+  "feature_value_overlap": {
+    "mn_kda": {
+      "ofet_unique": 40,
+      "external_unique": 41,
+      "intersection": 33,
+      "jaccard": 0.6875
+    },
+    "mw_kda": {
+      "ofet_unique": 39,
+      "external_unique": 12,
+      "intersection": 12,
+      "jaccard": 0.3076923076923077
+    },
+    "dispersity": {
+      "ofet_unique": 26,
+      "external_unique": 25,
+      "intersection": 25,
+      "jaccard": 0.9615384615384616
+    },
+    "regioregularity_pct": {
+      "ofet_unique": 10,
+      "external_unique": 10,
+      "intersection": 9,
+      "jaccard": 0.8181818181818182
+    },
+    "concentration_mg_ml": {
+      "ofet_unique": 11,
+      "external_unique": 11,
+      "intersection": 11,
+      "jaccard": 1.0
+    },
+    "solvent": {
+      "ofet_unique": 9,
+      "external_unique": 9,
+      "intersection": 4,
+      "jaccard": 0.2857142857142857
+    },
+    "electrode_material": {
+      "ofet_unique": 2,
+      "external_unique": 2,
+      "intersection": 2,
+      "jaccard": 1.0
+    },
+    "device_configuration": {
+      "ofet_unique": 2,
+      "external_unique": 2,
+      "intersection": 2,
+      "jaccard": 1.0
+    },
+    "channel_length_um": {
+      "ofet_unique": 12,
+      "external_unique": 12,
+      "intersection": 12,
+      "jaccard": 1.0
+    },
+    "channel_width_um": {
+      "ofet_unique": 11,
+      "external_unique": 10,
+      "intersection": 9,
+      "jaccard": 0.75
+    },
+    "substrate_pretreat": {
+      "ofet_unique": 3,
+      "external_unique": 3,
+      "intersection": 2,
+      "jaccard": 0.5
+    },
+    "deposition_type": {
+      "ofet_unique": 3,
+      "external_unique": 3,
+      "intersection": 0,
+      "jaccard": 0.0
+    },
+    "spin_rate_rpm": {
+      "ofet_unique": 8,
+      "external_unique": 7,
+      "intersection": 7,
+      "jaccard": 0.875
+    },
+    "spin_time_s": {
+      "ofet_unique": 3,
+      "external_unique": 2,
+      "intersection": 2,
+      "jaccard": 0.6666666666666666
+    },
+    "anneal_temperature_c": {
+      "ofet_unique": 10,
+      "external_unique": 11,
+      "intersection": 0,
+      "jaccard": 0.0
+    },
+    "anneal_time": {
+      "ofet_unique": 11,
+      "external_unique": 10,
+      "intersection": 0,
+      "jaccard": 0.0
+    },
+    "mobility_regime": {
+      "ofet_unique": 2,
+      "external_unique": 2,
+      "intersection": 2,
+      "jaccard": 1.0
+    },
+    "measurement_environment": {
+      "ofet_unique": 3,
+      "external_unique": 3,
+      "intersection": 2,
+      "jaccard": 0.5
+    },
+    "vds_v": {
+      "ofet_unique": 5,
+      "external_unique": 5,
+      "intersection": 5,
+      "jaccard": 1.0
+    }
+  },
+  "adjudication": "No exact cohort identity was detected from row count and target multisets."
+}
