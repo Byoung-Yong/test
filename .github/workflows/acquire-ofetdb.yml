@@ -52,6 +52,8 @@ jobs:
         run: python scripts/acquire_ofetdb.py
 
       - name: Verify structure-aware implementation
+        env:
+          PYTHONPATH: scripts
         run: |
           python -m py_compile scripts/run_structure_aware_validation.py tests/test_structure_aware_model.py
           pytest -q tests/test_structure_aware_model.py
