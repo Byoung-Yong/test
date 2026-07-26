@@ -6,6 +6,7 @@ on:
       - chatgpt/ofet-raw-acquisition-20260726
     paths:
       - scripts/**
+      - tests/**
       - .github/workflows/acquire-ofetdb.yml
       - trigger-ofet-acquisition.txt
 
@@ -16,7 +17,7 @@ jobs:
   acquire-and-validate:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - name: Check out acquisition branch
         uses: actions/checkout@v4
@@ -30,10 +31,30 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: python -m pip install --upgrade pip pandas openpyxl requests scipy scikit-learn catboost
+        run: python -m pip install --upgrade pip pandas openpyxl requests scipy scikit-learn catboost rdkit pytest
+
+      - name: Restore structure-aware source and tests
+        shell: bash
+        run: |
+          python - <<'PY'
+          import base64, gzip
+          from pathlib import Path
+          pairs = [
+              (Path('scripts/run_structure_aware_validation.py.gz.b64'), Path('scripts/run_structure_aware_validation.py')),
+              (Path('tests/test_structure_aware_model.py.gz.b64'), Path('tests/test_structure_aware_model.py')),
+          ]
+          for src, dst in pairs:
+              dst.parent.mkdir(parents=True, exist_ok=True)
+              dst.write_bytes(gzip.decompress(base64.b64decode(src.read_text().strip())))
+          PY
 
       - name: Download, verify, and convert OFET-db workbooks
         run: python scripts/acquire_ofetdb.py
+
+      - name: Verify structure-aware implementation
+        run: |
+          python -m py_compile scripts/run_structure_aware_validation.py tests/test_structure_aware_model.py
+          pytest -q tests/test_structure_aware_model.py
 
       - name: Run validation and preserve diagnostic output
         shell: bash
@@ -57,22 +78,28 @@ jobs:
             external709_code=99
             category_dump_code=99
           fi
+
+          python scripts/run_structure_aware_validation.py > structure_validation.log 2>&1
+          structure_code=$?
+
           echo "validation=$validation_code" > hidden_validation.exitcode
           echo "audit=$audit_code" >> hidden_validation.exitcode
           echo "external709=$external709_code" >> hidden_validation.exitcode
           echo "category_dump=$category_dump_code" >> hidden_validation.exitcode
-          cat hidden_validation.log
+          echo "structure=$structure_code" >> hidden_validation.exitcode
+          cat structure_validation.log
           exit 0
 
       - name: Commit data, results, and diagnostics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ofet_raw hidden_validation.log hidden_validation.exitcode
+          git add ofet_raw hidden_validation.log hidden_validation.exitcode structure_validation.log
           if [ -d ofet_hidden_validation ]; then git add ofet_hidden_validation; fi
+          if [ -d ofet_structure_validation ]; then git add ofet_structure_validation; fi
           if git diff --cached --quiet; then
             echo "No output changes"
             exit 0
           fi
-          git commit -m "Update hidden validation and 709 vocabulary audit"
+          git commit -m "Add repeat-unit structure-aware validation"
           git push origin HEAD:chatgpt/ofet-raw-acquisition-20260726
