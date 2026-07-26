@@ -1,1 +1,1 @@
-Trigger verified OFET-db acquisition and hidden validation on 2026-07-26, revision 2.
+Trigger verified OFET-db acquisition, hidden validation, and 709 vocabulary export on 2026-07-26, revision 3.
