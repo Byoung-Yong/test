@@ -1,0 +1,73 @@
+device_fab_id,params.electrode_configuration,params.gate_material,params.dielectric_material,params.dielectric_thickness,params.dielectric_material_2,params.dielectric_thickness_2,params.channel_length,params.channel_width,meta.electrode_material,meta.adhesion_layer,meta.dielectric_capacitance
+1,BGTC,n-doped Si,SiO2,300.0,,,80.0,1500.0,Au,,10.0
+2,BGBC,n-doped Si,SiO2,300.0,,,50.0,2000.0,Au,Cr,11.5
+3,,,,,,,,,,,
+4,BGTC,n-doped Si,SiO2,200.0,,,100.0,4000.0,Au,,17.25
+5,BGTC,n-doped Si,SiO2,200.0,,,125.0,4000.0,Au,,17.25
+6,BGBC,n-doped Si,SiO2,300.0,,,30.0,1400.0,Au,,11.0
+7,BGBC,n-doped Si,SiO2,300.0,,,40.0,1400.0,Au,,11.0
+8,BGBC,n-doped Si,SiO2,300.0,,,50.0,1400.0,Au,,11.0
+9,BGTC,n-doped Si,SiO2,200.0,,,125.0,1400.0,Au,,17.25
+10,BGBC,PET,PAN,800.0,PMSQ,50.0,70.0,7000.0,Au,,11.5
+11,BGTC,n-doped Si,SiO2,350.0,,,80.0,1500.0,Au,,11.5
+12,BGBC,n-doped Si,Si3N4,,,,120.0,3000.0,Au,,15.0
+13,BGTC,n-doped Si,SiO2,220.0,,,30.0,1000.0,Ag,,7.3
+14,BGTC,n-doped Si,Si3N4,400.0,PMMA,,120.0,3000.0,Au,MoO3,10.0
+15,BGBC,n-doped Si,SiO2,200.0,,,100.0,1000.0,Au,Cr,
+16,BGTC,n-doped Si,SiO2,300.0,,,40.0,800.0,Ag,MoO3,11.0
+17,BGTC,glass,6FDA-DABC,143.0,,,50.0,1000.0,Au,,0.196
+18,BGTC,glass,6FDA-DABC,77.0,,,50.0,1000.0,Au,,0.354
+19,BGTC,n-doped Si,Si3N4,400.0,PMMA,150.0,,,Au,,
+20,BGBC,n-doped Si,SiO2,300.0,,,10.0,15000.0,Au,,10.5
+21,BGTC,glass,PVP,430.0,,,50.0,1000.0,Au,,8.5
+22,BGTC,glass,Shellac,320.0,,,50.0,1000.0,Au,,9.36
+23,BGTC,n-doped Si,SiO2,300.0,,,70.0,4500.0,Au,,11.0
+24,TGBC,n-doped Si,CYTOP,447.0,,,70.0,4500.0,Au,,4.2
+25,BGBC,n-doped Si,SiO2,300.0,,,80.0,8800.0,Au,,11.0
+26,TGBC,glass,PMMA,550.0,,,20.0,10000.0,Au,,6.2
+27,BGTC,n-doped Si,SiO2,300.0,,,52.0,4400.0,Ag,,11.0
+28,TGBC,Au,PMMA,650.0,,,50.0,500.0,Au,,3.75
+29,TGBC,Al,CYTOP,500.0,,,20.0,10000.0,Au,,
+30,TGBC,Al,CYTOP,500.0,,,10.0,10000.0,Au,,
+31,TGBC,Al,CYTOP,500.0,,,5.0,10000.0,Au,,
+32,TGBC,Al,PMMA,500.0,,,,,Au,,
+33,TGBC,Al,PMMA,,,,150.0,1500.0,Au,,3.0
+34,TGBC,Al,PTrFE,600.0,,,30.0,500.0,Au,,
+35,TGBC,Al,CYTOP,550.0,,,30.0,500.0,Au,,
+36,BGBC,,SiO2,300.0,,,,,Au,,
+37,TGBC,Al,CYTOP,500.0,,,,,Au,,
+38,TGBC,Al,CYTOP,500.0,,,20.0,10000.0,Au,,3.7
+39,TGBC,Al,PMMA,500.0,,,20.0,10000.0,Au,,
+40,TGBC,Al,CYTOP,450.0,,,21.5,1000.0,Au,,
+41,TGBC,Al,PMMA,660.0,,,20.0,10000.0,Au,,4.8
+42,TGBC,Au,CYTOP,,,,50.0,500.0,Au,,3.5
+43,TGBC,Cu,CYTOP,2000.0,,,20.0,30000.0,Au,,3.5
+44,TGBC,Al,CYTOP,550.0,,,20.0,10000.0,Au,,3.9
+45,TGBC,Au,PMMA,750.0,,,80.0,5600.0,Au,,3.4
+46,BGBC,,SiO2,,,,20.0,2000.0,Au,,
+47,BGBC,n-doped Si,SiO2,200.0,,,50.0,2000.0,Au,Cr,
+48,BGBC,n-doped Si,SiO2,200.0,,,50.0,2000.0,Au,,
+49,BGBC,n-doped Si,SiO2,230.0,,,10.0,10000.0,Au,,
+50,BGTC,n-doped Si,SiO2,200.0,,,95.0,1500.0,Au,,
+51,BGBC,n-doped Si,SiO2,230.0,,,20.0,10000.0,Au,,
+52,BGBC,n-doped Si,SiO2,200.0,,,20.0,10000.0,Au,,
+53,BGBC,n-doped Si,SiO2,200.0,,,2.0,10000.0,Au,,
+54,BGBC,n-doped Si,SiO2,200.0,,,5.0,10000.0,Au,,
+55,BGBC,n-doped Si,SiO2,200.0,,,10.0,10000.0,Au,,
+56,BGBC,n-doped Si,SiO2,300.0,,,50.0,2000.0,Au,,
+57,BGBC,n-doped Si,SiO2,200.0,,,5.0,1000.0,Pt,,
+58,BGBC,n-doped Si,SiO2,200.0,,,5.0,1000.0,Au,,
+59,BGTC,n-doped Si,SiO2,300.0,,,50.0,5000.0,Au,,
+60,BGBC,n-doped Si,SiO2,230.0,,,5.0,40000.0,Au,,
+61,BGBC,n-doped Si,SiO2,230.0,,,,0.0,Au,,
+62,BGBC,n-doped Si,SiO2,200.0,,,20.0,800.0,Au,,
+63,BGTC,,,,,,100.0,1000.0,Au,,
+64,BGTC,,,,,,150.0,1000.0,Au,,
+65,BGTC,,,,,,200.0,1000.0,Au,,
+66,BGTC,,,,,,250.0,1000.0,Au,,
+67,BGBC,n-doped Si,SiO2,200.0,,,200.0,500.0,Au,,
+68,BGTC,n-doped Si,SiO2,200.0,,,100.0,148500.0,Au,,
+69,BGBC,n-doped Si,SiO2,200.0,,,7.5,1000.0,Au,,
+70,BGBC,n-doped Si,SiO2,300.0,,,20.0,9000.0,Au,,
+71,BGTC,n-doped Si,SiO2,300.0,,,100.0,148500.0,Au,,
+72,BGTC,n-doped Si,SiO2,300.0,,,30.0,500.0,Au,,

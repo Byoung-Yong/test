@@ -1,0 +1,177 @@
+{
+  "source_repository": "aaronliu64/ofetdb_public",
+  "files": {
+    "combined_seed_data.xlsx": {
+      "url": "https://raw.githubusercontent.com/aaronliu64/ofetdb_public/main/create_ofetdb/combined/combined_seed_data.xlsx",
+      "bytes": 234416,
+      "sha256": "d83ce3a51ee4219c6516be4cceca8ad28dfa1646e76636fc44999dda9007106b",
+      "git_blob_sha1": "dcb60dceddd5e130e26d9bbfdce589a00229726d",
+      "sheets": [
+        {
+          "sheet": "final_formatted",
+          "rows": 552,
+          "columns": 89,
+          "csv": "ofet_raw/csv/combined_seed_data__final_formatted.csv"
+        },
+        {
+          "sheet": "linking_tables",
+          "rows": 22,
+          "columns": 8,
+          "csv": "ofet_raw/csv/combined_seed_data__linking_tables.csv"
+        },
+        {
+          "sheet": "experiment_info",
+          "rows": 67,
+          "columns": 5,
+          "csv": "ofet_raw/csv/combined_seed_data__experiment_info.csv"
+        },
+        {
+          "sheet": "solution",
+          "rows": 552,
+          "columns": 2,
+          "csv": "ofet_raw/csv/combined_seed_data__solution.csv"
+        },
+        {
+          "sheet": "solvent",
+          "rows": 13,
+          "columns": 2,
+          "csv": "ofet_raw/csv/combined_seed_data__solvent.csv"
+        },
+        {
+          "sheet": "solution_makeup_solvent",
+          "rows": 251,
+          "columns": 3,
+          "csv": "ofet_raw/csv/combined_seed_data__solution_makeup_solvent.csv"
+        },
+        {
+          "sheet": "polymer",
+          "rows": 106,
+          "columns": 8,
+          "csv": "ofet_raw/csv/combined_seed_data__polymer.csv"
+        },
+        {
+          "sheet": "solution_makeup_polymer",
+          "rows": 294,
+          "columns": 3,
+          "csv": "ofet_raw/csv/combined_seed_data__solution_makeup_polymer.csv"
+        },
+        {
+          "sheet": "solution_treatment",
+          "rows": 27,
+          "columns": 1,
+          "csv": "ofet_raw/csv/combined_seed_data__solution_treatment.csv"
+        },
+        {
+          "sheet": "solution_treatment_step",
+          "rows": 27,
+          "columns": 7,
+          "csv": "ofet_raw/csv/combined_seed_data__solution_treatment_step.csv"
+        },
+        {
+          "sheet": "solution_treatment_order",
+          "rows": 27,
+          "columns": 3,
+          "csv": "ofet_raw/csv/combined_seed_data__solution_treatment_order.csv"
+        },
+        {
+          "sheet": "device_fabrication",
+          "rows": 72,
+          "columns": 12,
+          "csv": "ofet_raw/csv/combined_seed_data__device_fabrication.csv"
+        },
+        {
+          "sheet": "substrate_pretreat",
+          "rows": 16,
+          "columns": 1,
+          "csv": "ofet_raw/csv/combined_seed_data__substrate_pretreat.csv"
+        },
+        {
+          "sheet": "substrate_pretreat_step",
+          "rows": 10,
+          "columns": 5,
+          "csv": "ofet_raw/csv/combined_seed_data__substrate_pretreat_step.csv"
+        },
+        {
+          "sheet": "substrate_pretreat_order",
+          "rows": 22,
+          "columns": 3,
+          "csv": "ofet_raw/csv/combined_seed_data__substrate_pretreat_order.csv"
+        },
+        {
+          "sheet": "film_deposition",
+          "rows": 70,
+          "columns": 11,
+          "csv": "ofet_raw/csv/combined_seed_data__film_deposition.csv"
+        },
+        {
+          "sheet": "postprocess",
+          "rows": 52,
+          "columns": 1,
+          "csv": "ofet_raw/csv/combined_seed_data__postprocess.csv"
+        },
+        {
+          "sheet": "postprocess_step",
+          "rows": 52,
+          "columns": 5,
+          "csv": "ofet_raw/csv/combined_seed_data__postprocess_step.csv"
+        },
+        {
+          "sheet": "postprocess_order",
+          "rows": 52,
+          "columns": 3,
+          "csv": "ofet_raw/csv/combined_seed_data__postprocess_order.csv"
+        },
+        {
+          "sheet": "ofet_process",
+          "rows": 499,
+          "columns": 7,
+          "csv": "ofet_raw/csv/combined_seed_data__ofet_process.csv"
+        },
+        {
+          "sheet": "sample",
+          "rows": 552,
+          "columns": 4,
+          "csv": "ofet_raw/csv/combined_seed_data__sample.csv"
+        }
+      ]
+    },
+    "combined_measurements.xlsx": {
+      "url": "https://raw.githubusercontent.com/aaronliu64/ofetdb_public/main/create_ofetdb/combined/combined_measurements.xlsx",
+      "bytes": 55370,
+      "sha256": "63d3f66a7220c7d5128a7c824886b7873d1043013385a58bb39be6795a6f9cdc",
+      "git_blob_sha1": "b54676a8ba10d916a5b5e52b433cd12de1523b69",
+      "sheets": [
+        {
+          "sheet": "ofet_hole",
+          "rows": 413,
+          "columns": 14,
+          "csv": "ofet_raw/csv/combined_measurements__ofet_hole.csv"
+        },
+        {
+          "sheet": "ofet_electron",
+          "rows": 180,
+          "columns": 13,
+          "csv": "ofet_raw/csv/combined_measurements__ofet_electron.csv"
+        },
+        {
+          "sheet": "thickness",
+          "rows": 303,
+          "columns": 4,
+          "csv": "ofet_raw/csv/combined_measurements__thickness.csv"
+        },
+        {
+          "sheet": "uv_vis_film",
+          "rows": 17,
+          "columns": 4,
+          "csv": "ofet_raw/csv/combined_measurements__uv_vis_film.csv"
+        },
+        {
+          "sheet": "giwaxs",
+          "rows": 113,
+          "columns": 8,
+          "csv": "ofet_raw/csv/combined_measurements__giwaxs.csv"
+        }
+      ]
+    }
+  }
+}

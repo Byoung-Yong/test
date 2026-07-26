@@ -1,0 +1,11 @@
+substrate_pretreat_step_id,treatment_type,params.sam_name,params.iupac_name,params.pubchem_cid
+1,sam,MTS,methyltrichlorosilane,6399.0
+2,sam,PTS,phenyltrichlorosilane,7372.0
+3,sam,OTS-8,octyltrichlorosilane,21354.0
+4,sam,OTS-18,octadecyltrichlorosilane,8157.0
+5,sam,DTS,decyltriethoxysilane,76261.0
+6,sam,PFOCTS,"trichloro(3,3,4,4,5,5,6,6,7,7,8,8,8-tridecafluorooctyl)silane",123578.0
+7,sam,HMDS,[dimethyl-(trimethylsilylamino)silyl]methane,13838.0
+8,sam,FDTS,"trichloro(3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,10-heptadecafluorodecyl)silane",123577.0
+9,plasma_treatment,,,
+10,uv_ozone,,,
