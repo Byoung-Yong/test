@@ -44,7 +44,7 @@ jobs:
           if [ "$validation_code" -eq 0 ]; then
             python scripts/audit_dataset_independence.py >> hidden_validation.log 2>&1
             audit_code=$?
-            python scripts/run_709_external_dataset_test.py >> hidden_validation.log 2>&1
+            python scripts/run_709_external_dataset_test_fixed.py >> hidden_validation.log 2>&1
             external709_code=$?
           else
             audit_code=99
