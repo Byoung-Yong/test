@@ -1,9 +1,168 @@
-Traceback (most recent call last):
-  File "/home/runner/work/test/test/scripts/run_hidden_family_dataset_validation.py", line 420, in <module>
-    main()
-  File "/home/runner/work/test/test/scripts/run_hidden_family_dataset_validation.py", line 353, in main
-    p3ht, p3ht_manifest = download_and_parse_p3ht()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/test/test/scripts/run_hidden_family_dataset_validation.py", line 140, in download_and_parse_p3ht
-    raise RuntimeError(f"P3HT MAT blob mismatch: {actual_blob}")
-RuntimeError: P3HT MAT blob mismatch: 5ce52b1fb505f3bb2c5341a57349381713195b60
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/impute/_base.py:647: UserWarning: Skipping features without any observed values: ['regioregularity_pct' 'measurement_temperature_c']. At least one non-missing value is needed for imputation with strategy='median'.
+  warnings.warn(
+                                 test selected_model  n_train  n_test     skill    ci_low   ci_high  strict_pass
+               OFET-db leave-P3HT-out     cat_medium      372     218  0.193864  0.049188  0.297924         True
+            OFET-db leave-DPP-DTT-out    cat_shallow      387     203 -0.340046 -0.531436 -0.164121        False
+              OFET-db leave-N2200-out    cat_shallow      421     169 -0.177298 -0.519500 -0.002365        False
+OFET-db non-P3HT -> external P3HT-218     cat_medium      372     218  0.171746 -0.001405  0.276862        False
+{
+  "family_rotation_all_pass": false,
+  "dataset_and_family_hidden_pass": false,
+  "universal_mobility_gate_pass": false,
+  "acceptance_rule": "skill > 0 and source-cluster bootstrap 95% CI lower bound > 0 for every held family and the external dataset+family test",
+  "note": "Retrospective locked external validation; the P3HT dataset was known to the wider project before this split and is not claimed as pristine prospective data."
+}

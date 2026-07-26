@@ -1,0 +1,7 @@
+{
+  "family_rotation_all_pass": false,
+  "dataset_and_family_hidden_pass": false,
+  "universal_mobility_gate_pass": false,
+  "acceptance_rule": "skill > 0 and source-cluster bootstrap 95% CI lower bound > 0 for every held family and the external dataset+family test",
+  "note": "Retrospective locked external validation; the P3HT dataset was known to the wider project before this split and is not claimed as pristine prospective data."
+}
