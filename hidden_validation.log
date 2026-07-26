@@ -329,18 +329,51 @@ OFET-db non-P3HT -> external P3HT-218     cat_medium      372     218  0.171746 
 /opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/sklearn/base.py:525: InconsistentVersionWarning: Trying to unpickle estimator OneHotEncoder from version 1.2.2 when using version 1.9.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
 https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
   warnings.warn(
-Traceback (most recent call last):
-  File "/home/runner/work/test/test/scripts/run_709_external_dataset_test.py", line 310, in <module>
-    main()
-  File "/home/runner/work/test/test/scripts/run_709_external_dataset_test.py", line 261, in main
-    selected, inner_scores = choose_model(X_train, y_train, ofet["source"].astype(str).to_numpy())
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/test/test/scripts/run_709_external_dataset_test.py", line 203, in choose_model
-    unique = np.unique(groups)
-             ^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/numpy/lib/_arraysetops_impl.py", line 296, in unique
-    ret = _unique1d(ar, return_index, return_inverse, return_counts,
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.11.15/x64/lib/python3.11/site-packages/numpy/lib/_arraysetops_impl.py", line 385, in _unique1d
-    ar.sort()
-TypeError: '<' not supported between instances of 'float' and 'str'
+{
+  "selected_model": "random_forest",
+  "n_train": 590,
+  "n_external": 682,
+  "train_sources": 55,
+  "train_class_counts": {
+    "0": 539,
+    "1": 51
+  },
+  "external_class_counts": {
+    "0": 533,
+    "1": 149
+  },
+  "accuracy": 0.4633431085043988,
+  "balanced_accuracy": 0.5333618746615965,
+  "balanced_accuracy_skill_vs_0.5": 0.06672374932319292,
+  "f1": 0.3487544483985765,
+  "roc_auc": 0.5030660941611997,
+  "minimum_field_mapping_fraction": 0.0,
+  "mean_field_mapping_fraction": 0.7978813559322034,
+  "inner_scores": {
+    "logistic_C0.1": {
+      "mean_balanced_accuracy": 0.5104056069199412,
+      "worst_balanced_accuracy": 0.394109396914446
+    },
+    "logistic_C1": {
+      "mean_balanced_accuracy": 0.5113491455672843,
+      "worst_balanced_accuracy": 0.394109396914446
+    },
+    "logistic_C10": {
+      "mean_balanced_accuracy": 0.4981912508304422,
+      "worst_balanced_accuracy": 0.394109396914446
+    },
+    "random_forest": {
+      "mean_balanced_accuracy": 0.5546898324147207,
+      "worst_balanced_accuracy": 0.4586255259467041
+    }
+  },
+  "row_bootstrap_ci_low": -0.020862889092881476,
+  "row_bootstrap_ci_high": 0.15313234896590455,
+  "row_bootstrap_p_skill_positive": 0.93185,
+  "empirical_dataset_signal_pass": false,
+  "source_cluster_validation_available": false,
+  "family_labels_available": false,
+  "strict_universal_dataset_gate_eligible": false,
+  "strict_universal_dataset_gate_pass": false,
+  "adjudication": "The 709-OFET repository provides an independent dataset-level test of shared device/process categories, but lacks public DOI/family row mappings. Row-bootstrap evidence cannot substitute for source-cluster and family-hidden validation."
+}

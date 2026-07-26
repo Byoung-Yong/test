@@ -1,0 +1,80 @@
+{
+  "files": {
+    "features_cat_onehot.npy": {
+      "url": "https://raw.githubusercontent.com/YajingSun-Group/ofet_agent/main/1_ML_models/data/features_cat_onehot.npy",
+      "bytes": 633024,
+      "sha256": "35b5165ef29b2d427e30d8d5ebcce580c10341014c577bbbd69bfad94d4e5b37",
+      "git_blob_sha1": "d7b9a9c36fc8a1a98185f56b9e4a135ca82ad9c8"
+    },
+    "labels.npy": {
+      "url": "https://raw.githubusercontent.com/YajingSun-Group/ofet_agent/main/1_ML_models/data/labels.npy",
+      "bytes": 5584,
+      "sha256": "bbff7a90268bdb0c5e482bb3f2b478a8d49d3e3ba83f54645980826ff51fb1bc",
+      "git_blob_sha1": "d0b0967b8f8ebc12b09b83aaf78680a15ab77254"
+    },
+    "enc.pkl": {
+      "url": "https://raw.githubusercontent.com/YajingSun-Group/ofet_agent/main/1_ML_models/enc.pkl",
+      "bytes": 2656,
+      "sha256": "837fd2affba4d9f545b2172935dd1752fca4598091b394f035f1ef341c700a81",
+      "git_blob_sha1": "6dd8db9a27faca6d73ee2c351a6fb016898155d3"
+    }
+  },
+  "external_meta": {
+    "full_shape": [
+      682,
+      116
+    ],
+    "shared_shape": [
+      682,
+      84
+    ],
+    "label_counts": {
+      "0": 533,
+      "1": 149
+    },
+    "encoder_category_lengths": {
+      "major_category": 10,
+      "Fabrication Category": 4,
+      "Source Electrodes Category": 25,
+      "Drain Electrodes Category": 26,
+      "Gate Electrode Category": 10,
+      "Dielectric Layer Category": 9,
+      "Device Geometries Category": 4,
+      "Conduction Type Category": 3,
+      "Test Atmosphere Category": 3,
+      "publication_year": 22
+    },
+    "selected_columns": [
+      "Fabrication Category",
+      "Source Electrodes Category",
+      "Drain Electrodes Category",
+      "Gate Electrode Category",
+      "Dielectric Layer Category",
+      "Device Geometries Category",
+      "Conduction Type Category",
+      "Test Atmosphere Category"
+    ]
+  },
+  "encoder_columns": [
+    "major_category",
+    "Fabrication Category",
+    "Source Electrodes Category",
+    "Drain Electrodes Category",
+    "Gate Electrode Category",
+    "Dielectric Layer Category",
+    "Device Geometries Category",
+    "Conduction Type Category",
+    "Test Atmosphere Category",
+    "publication_year"
+  ],
+  "shared_columns": [
+    "Fabrication Category",
+    "Source Electrodes Category",
+    "Drain Electrodes Category",
+    "Gate Electrode Category",
+    "Dielectric Layer Category",
+    "Device Geometries Category",
+    "Conduction Type Category",
+    "Test Atmosphere Category"
+  ]
+}

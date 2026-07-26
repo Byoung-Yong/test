@@ -1,0 +1,48 @@
+{
+  "selected_model": "random_forest",
+  "n_train": 590,
+  "n_external": 682,
+  "train_sources": 55,
+  "train_class_counts": {
+    "0": 539,
+    "1": 51
+  },
+  "external_class_counts": {
+    "0": 533,
+    "1": 149
+  },
+  "accuracy": 0.4633431085043988,
+  "balanced_accuracy": 0.5333618746615965,
+  "balanced_accuracy_skill_vs_0.5": 0.06672374932319292,
+  "f1": 0.3487544483985765,
+  "roc_auc": 0.5030660941611997,
+  "minimum_field_mapping_fraction": 0.0,
+  "mean_field_mapping_fraction": 0.7978813559322034,
+  "inner_scores": {
+    "logistic_C0.1": {
+      "mean_balanced_accuracy": 0.5104056069199412,
+      "worst_balanced_accuracy": 0.394109396914446
+    },
+    "logistic_C1": {
+      "mean_balanced_accuracy": 0.5113491455672843,
+      "worst_balanced_accuracy": 0.394109396914446
+    },
+    "logistic_C10": {
+      "mean_balanced_accuracy": 0.4981912508304422,
+      "worst_balanced_accuracy": 0.394109396914446
+    },
+    "random_forest": {
+      "mean_balanced_accuracy": 0.5546898324147207,
+      "worst_balanced_accuracy": 0.4586255259467041
+    }
+  },
+  "row_bootstrap_ci_low": -0.020862889092881476,
+  "row_bootstrap_ci_high": 0.15313234896590455,
+  "row_bootstrap_p_skill_positive": 0.93185,
+  "empirical_dataset_signal_pass": false,
+  "source_cluster_validation_available": false,
+  "family_labels_available": false,
+  "strict_universal_dataset_gate_eligible": false,
+  "strict_universal_dataset_gate_pass": false,
+  "adjudication": "The 709-OFET repository provides an independent dataset-level test of shared device/process categories, but lacks public DOI/family row mappings. Row-bootstrap evidence cannot substitute for source-cluster and family-hidden validation."
+}
